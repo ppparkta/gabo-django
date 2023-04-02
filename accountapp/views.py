@@ -5,6 +5,7 @@ from django.shortcuts import render
 from django.urls import reverse_lazy, reverse
 from django.views.generic import CreateView, UpdateView, DeleteView
 
+from accountapp.forms import AccountUpdateForm
 from accountapp.models import HelloWorld
 
 
@@ -31,3 +32,9 @@ class AccountDetailView(DeleteView):
     model = User
     context_object_name = 'target_user' #템플릿에서 사용하는 user객체의 이름을 다르게 설정할 수 있음
     template_name = 'accountapp/detail.html'
+
+class AccountUpdateView(UpdateView):
+    model = User
+    form_class = AccountUpdateForm
+    success_url = reverse_lazy('accountapp:hello_world')
+    template_name = 'accountapp/update.html'
