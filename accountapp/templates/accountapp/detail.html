@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{%block content%}
+{% block content %}
 <div>
   <div style="text-align:center; max-width:500px; margin:4rem auto;">
     <p>
@@ -11,9 +11,14 @@
     </h2>
 
   {% if target_user == user %}
-  <a href="{% url 'accountapp:update' pk=target_user.pk %}">
+  <a href="{% url 'accountapp:update' pk=user.pk %}">
     <p>
       Change Info
+    </p>
+  </a>
+  <a href="{% url 'accountapp:delete' pk=user.pk %}">
+    <p>
+      Quit
     </p>
   </a>
   {% endif %}

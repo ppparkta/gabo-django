@@ -19,4 +19,6 @@
 .pragmatic_header_logo{
     font-family: 'Lobster', cursive;
     font-weight: 700;
+    text-decoration: none;
+    color: black;
 }
