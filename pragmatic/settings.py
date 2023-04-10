@@ -53,6 +53,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'accountapp.apps.AccountappConfig',
     'bootstrap4',
+    'todo',
+
+
 
 ]
 
