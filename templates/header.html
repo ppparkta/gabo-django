@@ -10,8 +10,8 @@
         </div>
         <div>
             <span>nav1</span>
-            <span>nav2</span>
             {% if not user.is_authenticated %}
+            <span>nav2</span>
             <a href="{% url 'accountapp:create' %}">
                 <sapn>SignUp</sapn>
             </a>
@@ -19,6 +19,9 @@
                 <span>login</span>
             </a>
             {% else %}
+            <a href="{% url 'todo:todo_list' %}">
+                <span>To Do</span>
+            </a>
             <a href="{% url 'accountapp:detail' pk=user.pk %}">
                 <span>MyPage</span>
             </a>
