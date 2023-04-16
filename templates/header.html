@@ -20,9 +20,15 @@
                 <a href="{% url 'accountApp:detail' pk=user.pk %}">
                     <span>My Page</span>
                 </a>
+
+                <a href="{% url 'todoApp:todo_list' %}">
+                    <span>To do</span>
+                </a>
+
                 <a href="{% url 'accountApp:logout' %}?next={{ request.path }}">
                     <span>logout</span>
                 </a>
+
             {% endif %}
         </div>
     </div>
