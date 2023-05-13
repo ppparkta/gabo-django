@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from .models import Todo
 
-
+#챕터 5
 class TodoSimpleSerializer(serializers.ModelSerializer):
     class Meta:
         model = Todo
