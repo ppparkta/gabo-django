@@ -11,7 +11,6 @@ class Profile(models.Model):
     subjects = models.CharField(max_length=128)
     image = models.ImageField(upload_to='profile/', default='default.png')
 
-
 @receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):
     if created:

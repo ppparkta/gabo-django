@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'users',
+    # 'corsheaders',
+    'posts',
+    'django_filters',
 
 ]
 
@@ -109,6 +112,15 @@ REST_FRAMEWORK = {
         #프로젝트 인증 방식으로 토큰 채택
         'rest_framework.authentication.TokenAuthentication',
     ],
+    'DEFAULT_FILTER_BACKENDS': [
+        #필터링 기능 추가
+        'django_filters.rest_framework.DjangoFilterBackend',
+    ],
+    'DEFAULT_PAGINATION_CLASS':
+        #페이지네이션
+        'rest_framework.pagination.PageNumberPagination',
+        'PAGE_SIZE':
+        3,
 }
 
 # Internationalization
